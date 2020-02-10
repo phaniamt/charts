@@ -289,13 +289,13 @@ alertmanager:
     ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/user-guides/storage.md
     ##
     storage: {}
-     volumeClaimTemplate:
-       spec:
-         storageClassName: beta
-         accessModes: ["ReadWriteOnce"]
-         resources:
-           requests:
-             storage: 50Gi
+    # volumeClaimTemplate:
+    #   spec:
+    #     storageClassName: gluster
+    #     accessModes: ["ReadWriteOnce"]
+    #     resources:
+    #       requests:
+    #         storage: 50Gi
     #   selector: {}
 
 
@@ -1644,13 +1644,13 @@ prometheus:
     ## ref: https://github.com/coreos/prometheus-operator/blob/master/Documentation/user-guides/storage.md
     ##
     storageSpec: {}
-      volumeClaimTemplate:
-        spec:
-          storageClassName: beta
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 50Gi
+    #  volumeClaimTemplate:
+    #    spec:
+    #      storageClassName: gluster
+    #      accessModes: ["ReadWriteOnce"]
+    #      resources:
+    #        requests:
+    #          storage: 50Gi
     #    selector: {}
 
     ## AdditionalScrapeConfigs allows specifying additional Prometheus scrape configurations. Scrape configurations
